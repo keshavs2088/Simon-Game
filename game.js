@@ -7,15 +7,12 @@ var gamePattern = [];
 //array for user clicked pattern
 var userCLickedPattern = [];
 
-var started = false;
 var level = 0;
 
 //Start the game
 $(document).on("keydown", function (event) {
-  if (!started) {
-    $("#level-title").text("Level " + level);
+  if (level == 0) {
     nextSequence();
-    started = true;
   }
 });
 
@@ -23,7 +20,6 @@ $(document).on("keydown", function (event) {
 function startOver() {
   level = 0;
   gamePattern = [];
-  started = false;
 }
 
 //function for next sequence in game
@@ -81,8 +77,8 @@ function checkAnswer(currentLevel) {
     $("body").addClass("game-over");
 
     setTimeout(function () {
-      ($("body").removeClass("game-over"), 200);
-    });
+      $("body").removeClass("game-over");
+    }, 200);
 
     $("h1").text("Game Over, Press Any Key to Restart");
     startOver();
