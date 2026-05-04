@@ -32,7 +32,7 @@ Simon-Game/
 
 ⚙️ Installation & Setup
 Clone the repository:
-git clone https://github.com/your-username/simon-game.git
+git clone https://github.com/keshavs2088/simon-game.git
 Open the project folder:
 cd simon-game
 Open index.html in your browser
